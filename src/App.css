@@ -1,0 +1,454 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: (-50%, -50%);
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {transform: rotate(1turn)}
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  background-image: url('./assets/innovate.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+
+}
+p{
+  margin: 0;
+}
+.navbar {
+  padding: .55rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  max-width: 100px; /* Adjust the size as needed */
+}
+
+.input {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar input[type="text"] {
+  font-size: 1rem;
+  padding: .25rem .5rem;
+  width: 100%;
+  max-width: 25rem; /* Adjust the size as needed */
+  border-radius: .25rem;
+  color: #1f2937;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid black;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(31, 31, 31, 0.335);
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-right: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.links a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.main{
+  font-family: 'Poppins';
+  color: black;
+  /* background-image: url('./assets/innovate.png'); */
+}
+
+.cta{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3rem 8rem;
+}
+
+.bold{
+  display: flex; flex-direction: column;
+  line-height: 5rem;
+  margin-bottom: .5rem;
+}
+.see{
+  margin-left: 4rem;
+} 
+.not{
+  margin-left: 12rem;
+}
+.see,.not{
+  font-size: 4rem;
+}
+.fut{
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.info{
+  padding-left: .25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: .5rem  ;
+}
+.info span span{
+  font-weight: bold;
+}
+
+
+.cta-right img{
+  width: 38rem;
+}
+
+
+/* CSS */
+.button-50 {
+  appearance: button;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: #000000 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  text-align: center;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: all 250ms ease-in-out;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+  background-color: #6C69F8;
+  color: white;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: #FFFFFF;
+}
+
+.card{
+  max-width: 280px;
+  max-height: 350px;
+  gap: .25rem;
+  color: black;
+  font-family: 'Poppins';
+  transition: all 250ms ease-in-out;
+  margin-bottom: 1rem;
+  padding: .5rem .25rem;
+}
+.title{
+  font-size: .9rem;
+  font-weight: 500;
+}
+.card img{
+  max-width: 280px;
+  max-height: 250px;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.price{
+  font-size: .8rem;
+}
+
+.navleft{
+  background-color: #FFFFFF;
+  border-right: .5px solid #1f293758;
+  padding: 1rem 2rem 1rem 3rem;
+  height: 100vh;
+  margin-right: 2rem;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  color: black;
+  ul li{
+    padding: .5rem;
+    color: #1f2937;
+    font-weight: 600;
+    list-style-type: none;
+  }
+}
+
+.actualShop{
+  margin-top: 2rem;
+  display: flex; flex-direction: row; gap: 1rem;
+}
+
+.game{
+  background-image: url('./assets/cod.jpg');
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Poppins';
+  color: white;
+  font-weight: bold;
+  height: 300px;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  object-fit: cover;
+}
+
+.items{
+  font-family: 'Poppins';
+
+  font-weight: bold;
+  color: black;
+}
+
+.options{
+  color: black;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  padding: 1rem .5rem;
+  
+}
+select option{
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.footer a{
+  color: rgba(255, 255, 255, 0.353);
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 1rem;
+  transition: all 250ms ease-in-out;
+  &:hover{
+    color: white;
+  }
+}
+
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #1f293758;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  color: black;
+  font-weight: 400;
+  transition: all 250ms ease-in-out;
+  &:hover{
+    background-color: #3e4c5e58;
+    cursor: pointer;
+  }
+}
+.item__info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.item__img img{
+  width: 100px; 
+  object-fit: cover;
+}
+/* modal.css */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  overflow-y: auto; /* Enable scrolling if content exceeds modal height */
+}
+.price{
+  font-weight: bold;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+}
+
+
+.navleft ul li button{
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  transition: all 250ms ease-in-out;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+}
+.navleft ul li button:hover{
+  cursor: pointer;
+  background-color: #201f1f40;
+  box-shadow: #000000 4px 4px 0 0,#000 4px 4px 0 1px;
+
+}
+
+.card button {
+  margin-left: 4rem;
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  transition: all 250ms ease-in-out;
+  padding: .25rem .5rem;
+  border-radius: 5px
+}
+.card button:hover{
+  cursor: pointer;
+  background-color: #201f1f40;
+
+}
+
+
+@media screen and (max-width: 1150px) {
+  .cta{
+    flex-direction: column;
+  }
+  .navbar{
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar{
+    input[type="text"]{
+      display: none;
+    }
+  }
+}
